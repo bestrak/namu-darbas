@@ -1,0 +1,7 @@
+Vardas;Pavarde;ND1;ND2;ND3;ND4;ND5;Egzaminas
+Arvydas;Sabonis;8;8;9;8;10;9
+Jonas;Jonaitis;5;6;5;9;7;7
+Petras;Petraitis;6;9;9;10;10;8
+Arminas;Arminauskas;9;5;6;7;8;8
+Kitas;Kitauskas;7;7;6;8;9;9
+Jonasa;Kazlauskas;4;8;7;6;7;8
