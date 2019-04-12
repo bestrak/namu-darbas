@@ -6,8 +6,6 @@
 
 using namespace std;
 
-const int max_stud_kiekis = 100000;
-
 struct studentas
 {
     string vardas;
@@ -28,31 +26,16 @@ int main ()
     int i = 0;
 
     int kiekis = 0;
-    cout << "Kiek norite generuoti duomenu? (max 100000)" << endl;
+    cout << "Kiek norite generuoti duomenu?" << endl;
     try
     {
-        while(true)
-        {
-            cin >> kiekis;
-            if(kiekis > 100000)
-            {
-                cout << "Per didelis norimu duomenu kiekis! Iveskite is naujo" << endl;
-            }
-            else if (kiekis < 0)
-            {
-                cout << "Per mazas norimu duomenu kiekis! Iveskite is naujo" << endl;
-            }
-            else
-            {
-                break;
-            }
-        }
+        cin >> kiekis;
     }
     catch(int e)
     {
         cout << "Klaidos nr " << e << endl;
     }
-     auto start = chrono::steady_clock::now();
+    auto start = chrono::steady_clock::now();
     ofstream out_teig;
     ofstream out_neig;
     out_teig.open("teigiami.txt");
@@ -80,7 +63,7 @@ int main ()
         }
         i++;
     }
-     auto end = chrono::steady_clock::now();
+    auto end = chrono::steady_clock::now();
     auto diff = end - start;
     cout  << "Uztruko: " << chrono::duration <double, milli> (diff).count() << " milli s" << endl;
     out_neig.close();
