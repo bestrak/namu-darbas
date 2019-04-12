@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <fstream>
 #include <chrono>
+#include <vector>
 
 using namespace std;
 
@@ -17,13 +18,13 @@ struct studentas
 } ;
 
 void skaiciavimai(studentas& stud);
-void generate_data(studentas& stud, int i);
+studentas generate_data(int i);
 int tikrinimas(studentas stud);
 void out(studentas stud, ofstream& file);
 
 int main ()
 {
-    studentas stud[max_stud_kiekis];
+    vector<studentas> stud;
     int i = 0;
 
     int kiekis = 0;
@@ -33,7 +34,7 @@ int main ()
         while(true)
         {
             cin >> kiekis;
-            if(kiekis >= 100000)
+            if(kiekis > 100000)
             {
                 cout << "Per didelis norimu duomenu kiekis! Iveskite is naujo" << endl;
             }
@@ -51,7 +52,7 @@ int main ()
     {
         cout << "Klaidos nr " << e << endl;
     }
-    auto start = chrono::steady_clock::now();
+     auto start = chrono::steady_clock::now();
     ofstream out_teig;
     ofstream out_neig;
     out_teig.open("teigiami.txt");
@@ -65,7 +66,8 @@ int main ()
 
     for(int j = 0; j < kiekis; j++)
     {
-        generate_data(stud[j], j);
+
+        stud.push_back(generate_data(j));
         skaiciavimai(stud[j]);
         int ar = tikrinimas(stud[j]);
         if(ar > 0)
@@ -78,16 +80,17 @@ int main ()
         }
         i++;
     }
-    auto end = chrono::steady_clock::now();
+     auto end = chrono::steady_clock::now();
     auto diff = end - start;
-    cout << chrono::duration <double, nano> (diff).count() << " ns" << endl;
+    cout  << "Uztruko: " << chrono::duration <double, milli> (diff).count() << " milli s" << endl;
     out_neig.close();
     out_teig.close();
 
     return 0;
 }
-void generate_data(studentas& stud, int i)
+studentas generate_data(int i)
 {
+    studentas stud;
     stud.nd_vidurkis = 0;
     stud.vardas = "vardas" + to_string(i);
     stud.pavarde = "pavarde" + to_string(i);
@@ -99,6 +102,7 @@ void generate_data(studentas& stud, int i)
     int random = rand() % 10 + 1;
     stud.egz = random;
     stud.nd_vidurkis = stud.nd_vidurkis / 5;
+    return stud;
 }
 void skaiciavimai(studentas& stud)
 {

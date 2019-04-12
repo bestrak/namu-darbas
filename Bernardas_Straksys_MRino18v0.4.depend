@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1555095045 source:c:\users\gabija\desktop\c++\bernardas_straksys_mrino18v0.4\bernardas_straksys_mrino18v0.4.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<chrono>
+	<vector>
+
