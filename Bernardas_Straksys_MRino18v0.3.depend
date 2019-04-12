@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1555005029 source:c:\users\gabija\desktop\c++\head.cpp
+	<iomanip>
+	<iostream>
+	<vector>
+	<bits/stdc++.h>
+	"head.h"
+
+1555004432 c:\users\gabija\desktop\c++\head.h
+	<iomanip>
+	<vector>
+
+1555096565 source:c:\users\gabija\desktop\c++\head2.cpp
+	"head2.h"
+	<iomanip>
+	<iostream>
+	<bits/stdc++.h>
+
+1555096551 c:\users\gabija\desktop\c++\head2.h
+	"head.h"
+	<iomanip>
+	<vector>
+
+1555096512 source:c:\users\gabija\desktop\c++\bernardas_straksys_mrino18v0.3.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<bits/stdc++.h>
+	<vector>
+	"head.h"
+	"head2.h"
+
