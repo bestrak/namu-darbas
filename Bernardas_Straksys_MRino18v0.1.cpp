@@ -6,7 +6,6 @@
 using namespace std;
 
 const int max_nd_kiekis = 100;
-const int max_stud_kiekis = 100;
 
 struct studentas
 {
@@ -20,54 +19,26 @@ struct studentas
     double mediana;
 } ;
 
-void read(studentas& stud);
+studentas read();
 int read_nd(string& ar);
 int read_egz();
 void skaiciavimai(studentas& stud);
 int output();
-void generate_data(studentas& stud, int i);
 
 int main ()
 {
-    studentas stud[max_stud_kiekis];
-    string generuoti;
+    vector<studentas> stud;
     int i = 0;
-
-    cout << "Norite ivesti studentu duomenis ar generuoti atsitiktinai?(Ivesti-I;Generuoti-G)" << endl;
-    cin >> generuoti;
-
-    if(generuoti == "G" || generuoti == "g")
+    string next = "T";
+    while(next == "T" || next == "t")
     {
-        int kiekis = 0;
-        cout << "Kiek norite generuoti duomenu?" << endl;
-        try
-        {
-            cin >> kiekis;
-        }
-        catch(int e)
-        {
-            cout << "Klaidos nr " << e << endl;
-        }
-        for(int j = 0; j < kiekis; j++)
-        {
-            generate_data(stud[j], j);
-            skaiciavimai(stud[j]);
-            i++;
-        }
-    }
-    else
-    {
-        string next = "T";
-        while(next == "T" || next == "t")
-        {
-            next = "N";
-            read(stud[i]);
-            skaiciavimai(stud[i]);
-            i++;
-            cout << "Ar norite ivesti dar viena studenta? (T-taip, N-ne)" << endl;
-            cin >> next;
-            cout << endl;
-        }
+        next = "N";
+        stud.push_back(read());
+        skaiciavimai(stud[i]);
+        i++;
+        cout << "Ar norite ivesti dar viena studenta? (T-taip, N-ne)" << endl;
+        cin >> next;
+        cout << endl;
     }
     int kuris = output();
     if(kuris == 2)
@@ -87,25 +58,10 @@ int main ()
 
     return 0;
 }
-void generate_data(studentas& stud, int i)
-{
-    stud.nd_vidurkis = 0;
-    stud.vardas = "vardas" + to_string(i);
-    stud.pavarde = "pavarde" + to_string(i);
-    for(int i = 0; i < 5; i++)
-    {
-        int ran = rand() % 10 + 1;
-        stud.nd.push_back(ran);
-        stud.nd_vidurkis += ran;
-    }
-    int random = rand() % 10 + 1;
-    stud.egz = random;
-    stud.nd_vidurkis = stud.nd_vidurkis / 5;
-    stud.nd_kiekis = 5;
-}
-void read(studentas& stud)
+studentas read()
 {
 
+    studentas stud;
     int i = 0;
     cout << "Iveskite studento varda:" << endl;
     cin >> stud.vardas;
@@ -128,7 +84,7 @@ void read(studentas& stud)
     stud.nd_kiekis = i;
     stud.nd_vidurkis = stud.nd_vidurkis/i;
     stud.egz = read_egz();
-
+    return stud;
 }
 int read_nd(string& ar)
 {
