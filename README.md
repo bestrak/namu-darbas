@@ -4,13 +4,13 @@ Kiekvienoje šakoje yra atskirai kiekvienai versijai kurtas kodas + duomenų fai
 *v0.1*
 Yra dvi versijos v0.1 versijos, t.y. su array ir su vector tipo konteineriais
 Studentų duomenys yra įvedami ranka konsolėje
-
+************************************************************
 *v0.2*
 Pridėta galimybė paimti studentų duomenis iš duomenų failų
-
+************************************************************
 *v0.3*
 Išskirtas .h (headerio) failas, panaudoti try - catch blokai
-
+************************************************************
 *v0.4*
 Pridėta galimybė generuoti atsitiktinius studentų duoemnis nurodant jų kiekį
 Įvesti duomenys išskirstomi į "patenkinamus" ir "nepatenkinamus" pažymius gavusių studentų sąrašus, kurie išvedami į rezultatų failus "teigiami.txt" ir "neigiami.txt"
@@ -27,7 +27,7 @@ Rezultatai:
 | 100000        | 4367,91       |
 
 Iš gautų rezultatų matome, kad didėjant duomenų kiekiui išauga ir programos veikimo laikas, tai gi galime teigti, kad programos veikimo laikas yra tiesiogiai proporingas duomenų kiekiui
-
+************************************************************
 *v0.5*
 Atliktas testavimas su skirtingais konteinerių tipais: vector, list, deque
 
@@ -53,7 +53,7 @@ Su 100000 eilučių:
 
 
 Iš gautų rezultatų matome, kad programa letėja priklausomai nuo duomenų kiekio. Visi konteineriai veikia panašiu greičiu, tačiau su daugiau duomenų list tipo konteineris veikė greičiausiai, kai vector tipo konteineris veikė lėčiausiai
-
+************************************************************
 *v1.0*
 Atliktas tyrimas su dviejomis strategijomis:
 1. Kai "teigiami" ir "neigiami" pažymiai yra išskirstomi į du naujus konteinerius
