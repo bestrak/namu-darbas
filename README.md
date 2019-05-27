@@ -1,12 +1,23 @@
 # efektyvumo tyrimo rezultatai
 ************************************************************
-v0.4 efektyvumo tyrimas:
+v0.5 efektyvumo tyrimas:
+Atliktas trimas su 10000 ir 100000 eilučių
+(Lentelėse pateiktas laikas yra suvidurkintas iš 3 bandymų)
 
-Su 10 eilučių duomenų užtruko:      3.001 ms
-Su 100 eilučių duomenų užtruko:     6.001 ms
-Su 1000 eilučių duomenų užtruko:    48.973 ms
-Su 10000 eilučių duomenų užtruko:   428.74 ms
-Su 100000 eilučių duomenų užtruko:  4367.91 ms
+Su 10000 eilučių: 
+|     Tipas     |     Laikas    |
+| ------------- | ------------- |
+|     vector    |    323,886    |
+|      list     |    330,263    |
+|     deque     |    306,632    |
 
-Iš gautų rezultatų matome, kad didėjant duomenų kiekiui išauga ir programos veikimo laikas, tai gi galime teigti, kad programos veikimo laikas yra tiesiogiai proporingas duomenų kiekiui
+Su 100000 eilučių: 
+|     Tipas     |   Laikas(ms)  |
+| ------------- | ------------- |
+|     vector    |    305,271    |
+|      list     |    350,538    |
+|     deque     |    331,799    |
+
+
+Iš gautų rezultatų matome, kad programa greičiausiai veikia su vector ir deque tipais ir šiek tiek lėčiau su list tipo konteineriais
 ************************************************************
