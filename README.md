@@ -21,8 +21,8 @@ Su 100000 eilučių:
 
 Iš gautų rezultatų matome, kad programa greičiausiai veikia su vector ir deque tipais ir šiek tiek lėčiau su list tipo konteineriais
 ************************************************************
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Tables        | Are           |
+| ------------- |:-------------:|
+| col 3 is      | right-aligned |
+| col 2 is      | centered      |
+| zebra stripes | are neat      |
