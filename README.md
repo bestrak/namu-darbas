@@ -1,20 +1,20 @@
-# Duomenu apdorojimas
-Kiekvienoje šakoje yra atskirai kiekvienai versijai kurtas kodas + duomenų failai
+# Duomenu apdorojimas  
+Kiekvienoje šakoje yra atskirai kiekvienai versijai kurtas kodas + duomenų failai  
 ****************************************************************************************
-**v0.1**
-Yra dvi versijos v0.1 versijos, t.y. su array ir su vector tipo konteineriais
-Studentų duomenys yra įvedami ranka konsolėje
+**v0.1**  
+Yra dvi versijos v0.1 versijos, t.y. su array ir su vector tipo konteineriais  
+Studentų duomenys yra įvedami ranka konsolėje  
 ************************************************************
-**v0.2**
-Pridėta galimybė paimti studentų duomenis iš duomenų failų
+**v0.2**  
+Pridėta galimybė paimti studentų duomenis iš duomenų failų  
 ************************************************************
-**v0.3**
-Išskirtas .h (headerio) failas, panaudoti try - catch blokai
+**v0.3**  
+Išskirtas .h (headerio) failas, panaudoti try - catch blokai  
 ************************************************************
-**v0.4**
-Pridėta galimybė generuoti atsitiktinius studentų duoemnis nurodant jų kiekį
-Įvesti duomenys išskirstomi į "patenkinamus" ir "nepatenkinamus" pažymius gavusių studentų sąrašus, kurie išvedami į rezultatų failus "teigiami.txt" ir "neigiami.txt"
-Atlikta programos greičio spartos analizė
+**v0.4**  
+Pridėta galimybė generuoti atsitiktinius studentų duomenis nurodant jų kiekį  
+Įvesti duomenys išskirstomi į "patenkinamus" ir "nepatenkinamus" pažymius gavusių studentų sąrašus, kurie išvedami į rezultatų failus "teigiami.txt" ir "neigiami.txt"  
+Atlikta programos greičio spartos analizė  
 
 Rezultatai:
 
@@ -28,14 +28,14 @@ Rezultatai:
 
 Iš gautų rezultatų matome, kad didėjant duomenų kiekiui išauga ir programos veikimo laikas, tai gi galime teigti, kad programos veikimo laikas yra tiesiogiai proporingas duomenų kiekiui
 ************************************************************
-**v0.5**
-Atliktas testavimas su skirtingais konteinerių tipais: vector, list, deque
+**v0.5**  
+Atliktas testavimas su skirtingais konteinerių tipais: vector, list, deque  
 
-Rezultatai:
-Atliktas trimas su 10000 ir 100000 eilučių
-(Lentelėse pateiktas laikas yra suvidurkintas iš 3 bandymų)
-
-Su 10000 eilučių: 
+Rezultatai:  
+Atliktas trimas su 10000 ir 100000 eilučių  
+(Lentelėse pateiktas laikas yra suvidurkintas iš 3 bandymų)  
+  
+Su 10000 eilučių:   
 
 | Tipas         | Laikas(ms)    | Vieta pagal greitį |
 | ------------- | ------------- | ----------------- |
@@ -52,19 +52,19 @@ Su 100000 eilučių:
 |     deque     |    3354,8     | 2 |
 
 
-Iš gautų rezultatų matome, kad programa letėja priklausomai nuo duomenų kiekio. Visi konteineriai veikia panašiu greičiu, tačiau su daugiau duomenų list tipo konteineris veikė greičiausiai, kai vector tipo konteineris veikė lėčiausiai
+Iš gautų rezultatų matome, kad programa letėja priklausomai nuo duomenų kiekio. Visi konteineriai veikia panašiu greičiu, tačiau su daugiau duomenų list tipo konteineris veikė greičiausiai, kai vector tipo konteineris veikė lėčiausiai  
 ************************************************************
-**v1.0**
-Atliktas tyrimas su dviejomis strategijomis:
-1. Kai "teigiami" ir "neigiami" pažymiai yra išskirstomi į du naujus konteinerius
-2. Kai "teigiami" pažymiai yra paliekami sename konteineryje, o "neigiami" perkeliami į naują ir ištrinami iš senojo
+**v1.0**  
+Atliktas tyrimas su dviejomis strategijomis:  
+1. Kai "teigiami" ir "neigiami" pažymiai yra išskirstomi į du naujus konteinerius  
+2. Kai "teigiami" pažymiai yra paliekami sename konteineryje, o "neigiami" perkeliami į naują ir ištrinami iš senojo  
+  
+Rezultatai:  
 
-Rezultatai:
+Atliktas trimas su 10000 eulučių, nes su 100000 nebuvo sulaukta kada programa baigs darbą (veikė ilgiau nei 5 min)  
+(Lentelėse pateiktas laikas yra suvidurkintas iš 3 bandymų)  
 
-Atliktas trimas su 10000 eulučių, nes su 100000 nebuvo sulaukta kada programa baigs darbą (veikė ilgiau nei 5 min)
-(Lentelėse pateiktas laikas yra suvidurkintas iš 3 bandymų)
-
-Su 10000 eilučių pagal pirmą strategiją (išskirstoma į du naujus konteinerius): 
+Su 10000 eilučių pagal pirmą strategiją (išskirstoma į du naujus konteinerius):   
 
 | Tipas         | Laikas(ms)    | Vieta pagal greitį |
 | ------------- | ------------- | ----------------- |
@@ -80,5 +80,5 @@ Su 10000 eilučių pagal antrą strategiją (išskirstoma į vieną naują konte
 | list          | 934,0263      | 1 |
 | deque         | 5452,027      | 2 |
 
-Iš gautų rezultatų matome, kad naudojant trynimo operaciją smarkiai suletėja programos veikimas su vector tipo konteineriu, šiek tiek sulėtėja su deque tipo konteineriu, bet pagreitėja su list tipo konteineriu.
+Iš gautų rezultatų matome, kad naudojant trynimo operaciją smarkiai suletėja programos veikimas su vector tipo konteineriu, šiek tiek sulėtėja su deque tipo konteineriu, bet pagreitėja su list tipo konteineriu.  
 ************************************************************
