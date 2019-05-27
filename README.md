@@ -1,5 +1,6 @@
 # Duomenu apdorojimas  
 Kiekvienoje šakoje yra atskirai kiekvienai versijai kurtas kodas + duomenų failai  
+Norint įsidiegti programas reikia turėti c++ kalbos kompiliatorių, kad sugeneruotumėta .exe (execute) failą, kuris vykdytų programą  
 ****************************************************************************************
 **v0.1**  
 Yra dvi versijos v0.1 versijos, t.y. su array ir su vector tipo konteineriais  
@@ -7,6 +8,8 @@ Studentų duomenys yra įvedami ranka konsolėje
 ************************************************************
 **v0.2**  
 Pridėta galimybė paimti studentų duomenis iš duomenų failų  
+Duomenų failo eilytės pvz:  
+Arvydas;Sabonis;8;8;9;8;10;9  
 ************************************************************
 **v0.3**  
 Išskirtas .h (headerio) failas, panaudoti try - catch blokai  
