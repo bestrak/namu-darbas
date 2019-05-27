@@ -6,20 +6,20 @@ Atliktas trimas su 10000 ir 100000 eilučių
 
 Su 10000 eilučių: 
 
-| Tipas         | Laikas        |
-| ------------- | ------------- |
-| vector        | 323,886       |
-| list          | 330,263       |
-| deque         | 306,632       |
+| Tipas         | Laikas(ms)    | Vieta pagal greitį |
+| ------------- | ------------- | ----------------- |
+| vector        | 323,886       | 2 |
+| list          | 330,263       | 3 |
+| deque         | 306,632       | 1 |
 
 Su 100000 eilučių: 
 
-|     Tipas     |   Laikas(ms)  |
-| :-----------: | :-----------: |
-|     vector    |    305,271    |
-|      list     |    350,538    |
-|     deque     |    331,799    |
+|     Tipas     |   Laikas(ms)  | Vieta pagal greitį |
+| ----------- | ----------- | ----------------- |
+|     vector    |    3392,0     | 3 |
+|      list     |    3180,38    | 1 |
+|     deque     |    3354,8     | 2 |
 
 
-Iš gautų rezultatų matome, kad programa greičiausiai veikia su vector ir deque tipais ir šiek tiek lėčiau su list tipo konteineriais
+Iš gautų rezultatų matome, kad programa letėja priklausomai nuo duomenų kiekio. Visi konteineriai veikia panašiu greičiu, tačiau su daugiau duomenų list tipo konteineris veikė greičiausiai, kai vector tipo konteineris veikė lėčiausiai
 ************************************************************
