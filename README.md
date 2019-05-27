@@ -6,8 +6,14 @@ Atliktas trimas su 10000 ir 100000 eilučių
 
 Su 10000 eilučių: 
 
+| Tipas         | Laikas        |
+| ------------- | ------------- |
+| vector        | 323,886       |
+| list          | 330,263       |
+| deque         | 306,632       |
 
 Su 100000 eilučių: 
+
 |     Tipas     |   Laikas(ms)  |
 | :-----------: | :-----------: |
 |     vector    |    305,271    |
@@ -17,14 +23,3 @@ Su 100000 eilučių:
 
 Iš gautų rezultatų matome, kad programa greičiausiai veikia su vector ir deque tipais ir šiek tiek lėčiau su list tipo konteineriais
 ************************************************************
-| Tipas        | Laikas         |
-| ------------- |:-------------:|
-| col 3 is      | right-aligned |
-| col 2 is      | centered      |
-| zebra stripes | are neat      |
-
-| Tipas         | Laikas        |
-| ------------- | ------------- |
-| vector        | 323,886       |
-| list          | 330,263       |
-| deque         | 306,632       |
