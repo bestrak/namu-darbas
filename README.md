@@ -5,11 +5,11 @@ Atliktas trimas su 10000 ir 100000 eilučių
 (Lentelėse pateiktas laikas yra suvidurkintas iš 3 bandymų)
 
 Su 10000 eilučių: 
-|     Tipas     |     Laikas    |
-| :-----------: | :-----------: |
-|     vector    |    323,886    |
-|      list     |    330,263    |
-|     deque     |    306,632    |
+| Tipas         | Laikas        |
+| ------------- | ------------: |
+| vector    | 323,886    |
+| list     | 330,263    |
+| deque     | 306,632    |
 
 Su 100000 eilučių: 
 |     Tipas     |   Laikas(ms)  |
